@@ -65,6 +65,7 @@ grails.project.dependency.resolution = {
         compile "org.grails.plugins:asset-pipeline:2.6.10"
         compile "org.grails.plugins:grails-cloudinary:0.3"
         compile "org.grails.plugins:spring-security-core:2.0.0"
+        compile ':recaptcha:1.5.0'
 
         // plugins needed at runtime but not for compilation
         runtime ":hibernate4:4.3.6.1" // or ":hibernate:3.6.10.18"
