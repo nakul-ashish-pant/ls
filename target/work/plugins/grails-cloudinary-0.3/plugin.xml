@@ -1,0 +1,11 @@
+<plugin name='grails-cloudinary' version='0.3' grailsVersion='2.3 &gt; *'>
+  <author>Simon Buettner</author>
+  <authorEmail>simon.buettner@infinit-group.de</authorEmail>
+  <title>Grails Cloudinary Plugin</title>
+  <description>Simplifies the usage of the cloudinary service at http://cloudinary.com/.</description>
+  <documentation>https://bitbucket.org/sbuettner/grails-cloudinary</documentation>
+  <type>GrailsCloudinaryGrailsPlugin</type>
+  <resources>
+    <resource>de.infinit.grails.plugins.cloudinary.CloudinaryTagLib</resource>
+  </resources>
+</plugin>
