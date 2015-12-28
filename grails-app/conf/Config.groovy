@@ -139,3 +139,5 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 ]
 grails.plugin.springsecurity.failureHandler.defaultFailureUrl = "/"
 grails.plugin.springsecurity.successHandler.defaultTargetUrl = "/user/dashboard"
+
+
