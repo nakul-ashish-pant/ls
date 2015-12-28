@@ -9,7 +9,6 @@ class UserController {
     @Secured('ROLE_ADMIN')
     def index() {
         render "Secure login from user controller written by nakul"
-        []
     }
 
     @Secured(['ROLE_ADMIN', 'ROLE_USER'])
@@ -24,9 +23,20 @@ class UserController {
 
     @Secured('permitAll')
     def register(RegistrationCommand registrationCommand) {
-
+        println registrationCommand.properties
+        boolean isRegistered=false
+        if(registrationCommand.validate(['userName','email'])){
+            isRegistered=registrationService.registerUser(registrationCommand)
+            if (isRegistered) {
+                render view: '/index',model: [msg:"User successfully registered."]
+            } else {
+                render view: '/index',model: [msg:"User not registered, either email or username is taken."]
+            }
+        }
+        else{
+            render(view: '/index',model: [registrationCommand:registrationCommand])
+        }
     }
-
 }
 
 

@@ -2,7 +2,7 @@ package com.bootcamp.linksharing
 
 import com.bootcamp.linksharing.command.RegistrationCommand
 
-class Registration implements Serializable {
+class Registration  {
 
     String userName
     String email
@@ -21,5 +21,10 @@ class Registration implements Serializable {
         return UUID.randomUUID().toString()
     }
 
+    Registration(RegistrationCommand registrationCommand){
+        this.userName=registrationCommand.userName
+        this.email=registrationCommand.email
+        this.token=registrationCommand.initializeToken()
+    }
 
 }

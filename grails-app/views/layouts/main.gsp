@@ -60,5 +60,15 @@
     <g:layoutBody/>
 </div>
 <asset:javascript src="application.js"/>
+<g:if test="${msg}">
+    <script type="text/javascript">
+    var message='${msg}';
+    $('#myModalLabel').text(message);
+    $('#myModal').modal('show');
+        $('#close').click(function(){
+            <% msg=null%>
+        });
+    </script>
+</g:if>
 </body>
 </html>

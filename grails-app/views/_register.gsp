@@ -6,7 +6,7 @@
             </div>
 
             <div class="col-md-6 col-md-offset-1">
-                <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+                <input type="text" class="form-control" placeholder="Username" name="userName" aria-describedby="sizing-addon2">
             </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
             </div>
 
             <div class="col-md-6 col-md-offset-1">
-                <input type="text" class="form-control" placeholder="E-Mail Address"
+                <input type="text" class="form-control" placeholder="E-Mail Address" name="email"
                        aria-describedby="sizing-addon2">
             </div>
         </div>

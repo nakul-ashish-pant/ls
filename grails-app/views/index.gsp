@@ -19,14 +19,21 @@
     </div>
 
     <div class="panel panel-primary">
+
         <div class="panel-heading">
             <h3 class="panel-title">Register</h3>
         </div>
-
         <div class="panel-body">
+            <g:hasErrors bean="${registrationCommand}">
+                <div class="panel col-md-12">
+                    <g:fieldError bean="${registrationCommand}" field="userName" />
+                    <g:fieldError bean="${registrationCommand}" field="email"/>
+                </div>
+            </g:hasErrors>
             <g:render template="/register"/>
-            <g:renderErrors bean="{cmd}"/>
         </div>
+
+
     </div>
 </div>
 
@@ -72,6 +79,11 @@
         </div>
     </div>
 </div>
+
+<g:render template="/alert"/>
+
+
+
 </body>
 </html>
 

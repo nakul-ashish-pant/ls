@@ -9,17 +9,15 @@ import grails.validation.Validateable
 
 @Validateable
 class RegistrationCommand {
-    String token
-    String username
+    String userName
     String email
 
     static constraints={
-        importFrom Registration,exclude: ["token"]
+        importFrom Registration
     }
 
     String initializeToken(){
         return UUID.randomUUID().toString()
     }
-    
 
 }
