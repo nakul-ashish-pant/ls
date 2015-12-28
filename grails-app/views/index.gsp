@@ -25,6 +25,7 @@
 
         <div class="panel-body">
             <g:render template="/register"/>
+            <g:renderErrors bean="{cmd}"/>
         </div>
     </div>
 </div>
